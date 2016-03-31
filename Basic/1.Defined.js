@@ -1,11 +1,11 @@
 //本章將說明關於Defined的基礎操作
-var a;
-console.log(a);
-a="value_A"
-console.log(a);
-var b = "value_B";
-console.log(b);
-console.log(c);
+var a;                    //定義一個a
+console.log(a);           //秀出a
+a="value_A"               //給予a一個value_A的字串
+console.log(a);           //秀出a
+var b = "value_B";        //給予b一個value_B的字串
+console.log(b);           //秀出b
+console.log(c);           //秀出c
 //---------------------------
 /*執行結果
 undefined
