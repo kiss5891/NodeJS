@@ -8,6 +8,17 @@ var app = require('../app');
 var debug = require('debug')('1.HTTP_StaticServer:server');
 var http = require('http');
 
+
+var server = http.createServer(function (req, res){
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+});
+
+//監聽 12345 port
+
+server.listen(12345);
+console.log('Server running at http://127.0.0.1:12345/');
+
 /**
  * Get port from environment and store in Express.
  */
