@@ -7,7 +7,8 @@ console.log(APPLE);
 const BANANA;
 console.log(BANANA);
 //---------------------------
-//7
-//7
-//undefined
-//---------------------------
+/*執行結果
+7
+7
+undefined
+*/

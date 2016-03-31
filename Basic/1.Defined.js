@@ -7,12 +7,13 @@ var b = "value_B";
 console.log(b);
 console.log(c);
 //---------------------------
-//undefined
-//value_A
-//value_B
-//console.log(c);
-//            ^
-//---------------------------
-/*
+/*執行結果
+undefined
+value_A
+value_B
+Error Msg
+console.log(c);
+            ^
+
 var可以被省略的可是在ECMAScript 5版以後已經不支援隱式定義了所以必須要注意記得加上var
 */
