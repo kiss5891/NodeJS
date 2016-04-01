@@ -3,9 +3,9 @@
 */
 var fs = require('fs');									//導入Filesysten模組
 				
-fs.readFile('0.1_example.json','utf8',function(err,data){				//讀取0.example.json檔案中內容
-	if(err){									//讀取失敗	
-		throw err;
+fs.readFile('0.1_example.json','utf8',function(err,data){				//讀取0.example.json檔案中內容放進data
+	if(err){										
+		throw err;								//拋出錯誤
 	}
 	console.log(data);								//秀出讀取的資料內容
 	console.log(JSON.parse(data));							//秀出將文字轉為json的檔案內容
