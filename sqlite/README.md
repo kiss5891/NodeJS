@@ -17,38 +17,38 @@
 **$mkdir sqliteDemo.js**
 
 ##引進sqlite
-'''var file = "./sqliteDemo.db"; //載入資料庫
+var file = "./sqliteDemo.db"; //載入資料庫
 
 var sqlite3 = require("sqlite3").verbose(); //載入 sqlite3
 
-var db = new sqlite3.Database(file); //新增一個sqlite3的資料庫test.db'''
+var db = new sqlite3.Database(file); //新增一個sqlite3的資料庫test.db
 
 ##判斷table是否建立
-'''db.serialize(function() {
-  db.run("CREATE TABLE IF NOT EXISTS  tableName (name TEXT,remark TEXT)");
- });
+db.serialize(function() {
+db.run("CREATE TABLE IF NOT EXISTS  tableName (name TEXT,remark TEXT)");
+});
 
-db.close();'''
+db.close();
 
 ##新增資料
-'''var sqlInsert = "INSERT INTO tableName(name,remark) VALUES (?,?)";
+var sqlInsert = "INSERT INTO tableName(name,remark) VALUES (?,?)";
   db.run(sqlInsert,["A","aaa"]);
   db.run(sqlInsert,["B","bbb"]);
   db.run(sqlInsert,["C","ccc"]);
-  db.run(sqlInsert,["D","ddd"]);'''
+  db.run(sqlInsert,["D","ddd"]);
 
 ##查詢
-'''var sqlSelect = "SELECT rowid AS id, name,remark FROM tableName";
-  db.each(sqlSelect, function(err, row) {
+var sqlSelect = "SELECT rowid AS id, name,remark FROM tableName";
+db.each(sqlSelect, function(err, row) {
     console.log(row.id + ": " + row.name + ":" + row.remark);
-  });'''
+});
 
 ##修改
-'''var sqlUpdate="update tableName set remark=? where name=?" ;
-  db.run(sqlUpdate,["J","D"]);'''
+var sqlUpdate="update tableName set remark=? where name=?" ;
+db.run(sqlUpdate,["J","D"]);
 
 ##刪除
-'''var sqlDelete = "delete from tableName";  db.run(sqlDelete);'''
+var sqlDelete = "delete from tableName";  db.run(sqlDelete);
 
 ###sqlite基本指令
 
