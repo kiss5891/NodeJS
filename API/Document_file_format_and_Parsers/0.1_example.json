@@ -1,0 +1,9 @@
+{                                            
+	"string" : "Linux",
+        "number" : 1234,
+        "information":{
+        	"name" : "Alex",
+                "age" : 22,
+                "tel" :["0987654321","0412345678"]
+	}
+}
