@@ -1,5 +1,7 @@
 /*
-使用msgpack模組包裝json成二進位(Binary)格式
+json在JavaScript以外的程式語言不易使用
+如果將json格式轉換為二進位的形式更方便其他機器解析
+所以可以使用msgpack模組包裝json成二進位(Binary)格式
 */
 var msgpack = require('msgpack');		//導入msgpack函式庫
 

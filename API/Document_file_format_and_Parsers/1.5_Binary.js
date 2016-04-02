@@ -1,5 +1,6 @@
 /*
-使用Buffer模組管理一塊記憶體並操作二進位資料
+JavaScript本身不支援二進位格式的操作和處理
+所以使用Buffer模組管理一塊記憶體並操作二進位資料
 */
 var buffer = new Buffer(16);				//建立一個16Bytes大小的記憶體空間
 var arrayBuffer = new Buffer([2,4,8,16,32,64,128,255]);	//使用陣列建立

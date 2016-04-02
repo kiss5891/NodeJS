@@ -6,7 +6,7 @@ var fs = require('fs');				//導入讀檔模組
 var csv = require('csv-parser');		//導入解析csv檔案模組
 
 fs.createReadStream('0.4_example.csv')		//開啟csv檔案並建立資料流管道
-	.pipe(csv())				//導入csv解析器
+	.pipe(csv())				//將讀取到的資料進行csv解析
 	.on('data',function(data){		//監聽data事件
 		console.log(data);		//顯示讀取到的每一列資料
 	});
