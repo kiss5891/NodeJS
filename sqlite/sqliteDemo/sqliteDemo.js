@@ -31,4 +31,4 @@ db.serialize(function() {
 
 });
 
-db.close();
+db.close();                                                                             //結束連接
