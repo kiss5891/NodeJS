@@ -17,14 +17,14 @@ db.open(function(err,db){
         	    collection.insert(doc2);								//├	將doc2新稱到mongo
 		    });											//└
 		    
-														//修改方程式	
+													//修改方程式	
 		db.collection('users',function(err,collection){						//├新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom'};			 			//├	設定query_doc的搜尋參數
 		    collection.update(query_doc,{'$set':{'age':26}});					//├	將'$set':{'age':26}更新到資料庫的query_doc裡
 		});											//└
 		
 													//刪除方程式	
-		db.collection('users',function(err,collection){ 					//├新稱方程式(資料放在users資料表裡)
+		db.collection('users',function(err,collection){ 						//├新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom_test'};						//├	設定query_doc的搜尋參數
 			collection.remove(query_doc);							//├	刪除query_doc
 		});											//└
