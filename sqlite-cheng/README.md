@@ -1,11 +1,16 @@
 #sqlite PI教學
 
 ##新增專案
-**$touch sqliteDemo.js**
+```bash
+$ touch sqliteDemo.js
+```
 
 ##進入專案
-**$nano sqliteDemo.js or  $vim sqliteDemo.js**
-
+(兩個參數均通用)
+```bash
+$ nano sqliteDemo.js   
+$ vim sqliteDemo.js
+```
 ##初始化
 **$npm init**
 
