@@ -4,13 +4,13 @@
 npm install mysql
 ```
 ##建立連線
-```
-var mysql      = require('mysql');//載入模組
-var connection = mysql.createConnection({//建立連接
-   host     : 'localhost',//mysql伺服器位置
-   user     : 'root',//mysql使用者名稱
-   password : 'user',//mysql使用者密碼
-   database : 'test'//使用的資料庫
+```javascript
+var mysql      = require('mysql');        //載入模組
+var connection = mysql.createConnection({ //建立連接
+   host     : 'localhost',                //mysql伺服器位置
+   user     : 'root',                     //mysql使用者名稱
+   password : 'user',                     //mysql使用者密碼
+   database : 'test'                      //使用的資料庫
  });
 
  connection.connect();//開始連接
