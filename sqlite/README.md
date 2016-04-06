@@ -58,13 +58,13 @@ db.run(sqlInsert,["D","ddd"]);
 ```javascript
 var sqlSelect = "SELECT rowid AS id, name,remark FROM tableName";
 db.each(sqlSelect, function(err, row) {
-    console.log(row.id + ": " + row.name + ":" + row.remark);
+  console.log(row.id + ": " + row.name + ":" + row.remark);
 });
 ```
 
 ##修改
 ```javascript
-var sqlUpdate="update tableName set remark=? where name=?" ;
+var sqlUpdate="update tableName set remark=? where name=?";
 db.run(sqlUpdate,["J","D"]);
 ```
 
