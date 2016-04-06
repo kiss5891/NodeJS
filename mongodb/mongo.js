@@ -17,7 +17,7 @@ db.open(function(err,db){
         	    collection.insert(doc2);								//├	將doc2新稱到mongo
 		    });											//└
 		    
-													//修改方程式	
+														//修改方程式	
 		db.collection('users',function(err,collection){						//├新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom'};			 			//├	設定query_doc的搜尋參數
 		    collection.update(query_doc,{'$set':{'age':26}});					//├	將'$set':{'age':26}更新到資料庫的query_doc裡
@@ -32,8 +32,8 @@ db.open(function(err,db){
 													//搜尋方成式
 		db.collection('users',function(err,collection){						//├新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom'};						//├	設定搜尋參數，名為query_doc
-			collection.findOne(query_doc,function(err,item){				//├	搜尋query_doc
-			 	console.log(item['first_name']);					//├		顯示item['first_name']
+			collection.findOne(query_doc,function(err,item){					//├	搜尋query_doc
+			 	console.log(item['first_name']);						//├		顯示item['first_name']
 				console.log(item['last_name']);						//├		顯示item['last_name']
 				console.log(item['age']);						//├		顯示item['age']
 			 	console.log(item.first_name);						//├		顯示item.first_name
