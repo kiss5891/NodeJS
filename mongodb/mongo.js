@@ -3,7 +3,7 @@ var Server = mongo.Server;										//簡寫mongo.Server成Server
 var Db=mongo.Db;												//簡寫mongo.Db成Db
 	
 var server = new Server('localhost',27017,{auto_reconnect:true});					//簡寫server成Server('localhost',27017,{auto_reconnect:true});
-var db = new Db('test',server);										//在mongo裡新增test的資料庫並稱之為db
+var db = new Db('mongotest',server);										//在mongo裡新增test的資料庫並稱之為db
 
 db.open(function(err,db){
     if(!err){
