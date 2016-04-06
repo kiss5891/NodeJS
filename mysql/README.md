@@ -1,6 +1,6 @@
 # Mysql
 ##載入模組
-```
+```bash
 npm install mysql
 ```
 ##建立連線
@@ -13,51 +13,50 @@ var connection = mysql.createConnection({ //建立連接
    database : 'test'                      //使用的資料庫
  });
 
- connection.connect();//開始連接
+ connection.connect();                    //開始連接
  ```
 ##新增資料
-```
-connection.query(//新增
-  //insert into `資料表名稱`,資料表後第一個括弧為欄位名稱,第二個括弧為值
+```javascript
+connection.query(                         //新增
+   //insert into `資料表名稱`,資料表後第一個括弧為欄位名稱,第二個括弧為值
   "INSERT INTO `employees` (`account`,`password`)values ('qwe','asd')"
   ,function(error){
-    if(error){
-        console.log('寫入資料失敗！');
-        throw error;
+      if(error){                            //如果執行錯誤
+         console.log('寫入資料失敗！');
+         throw error;
     }
 });
 ```
 ##修改
-```
-connection.query(//修改
+```javascript
+connection.query(                         //修改
   //update `資料表名稱`,SET後where前為修改內容,where後為修改條件
   "UPDATE `employees` SET `account`='zxc',`password`='qwe' where `account`='qwe'"
   ,function(error){
-   if(error){
-       console.log('更新資料失敗！');
-       throw error;
+      if(error){                             //如果執行錯誤
+         console.log('更新資料失敗！');
+         throw error;
    }
 });
 ```
 ##刪除
-```
-connection.query(//刪除
+```javascript
+connection.query(                         //刪除
   //delete from `資料表名稱`,where後為判斷條件
   "DELETE FROM  `employees` WHERE `id`>10"
   ,function(error){
-   if(error){
-       console.log('刪除資料失敗！');
-       throw error;
+      if(error){                             //如果執行錯誤
+         console.log('刪除資料失敗！');
+         throw error;
    }
 });
 ```
 ##查詢
-```
-connection.query(//查詢
-  //select (查詢條件) from `資料表名稱`
+```javascript
+connection.query(                         //查詢
+   //select (查詢條件) from `資料表名稱`
   "SELECT * FROM  `employees` " ,
-   //查詢結果會放在result裡面
-  function(error,result){                                                              
+  function(error,result){                 //查詢結果會放在result裡面                                                 
    if(error){
        console.log('查詢資料失敗！');
        throw error;
@@ -66,6 +65,6 @@ connection.query(//查詢
 });
 ```
 ##結束連線
-```
+```javascript
 connection.end();
 ```
