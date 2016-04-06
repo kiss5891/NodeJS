@@ -70,7 +70,8 @@ db.run(sqlUpdate,["J","D"]);
 
 ##刪除
 ```javascript
-var sqlDelete = "delete from tableName";  db.run(sqlDelete);
+var sqlDelete = "delete from tableName";  
+db.run(sqlDelete);
 ```
 
 ###sqlite基本指令
