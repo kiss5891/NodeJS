@@ -7,35 +7,39 @@ var db = new Db('test',server);										//在mongo裡新增test的資料庫並�
 
 db.open(function(err,db){
     if(!err){
-	    console.log("We are connected");
-													//新增doc,doc2
-		db.collection('users',function(err,collection){
-		        var doc = {'first_name':'tom','last_name':'lai'};
-			var doc2 = {'first_name':'tom_test','last_name':'lai_test'};
-        	    collection.insert(doc);								
-        	    collection.insert(doc2);			
-		    });
-													//修改	
-		db.collection('users',function(err,collection){
-		    var query_doc = {'first_name':'tom'};			 
-		    collection.update(query_doc,{'$set':{'age':26}});					//修改query_doc
-		});
-													//刪除	
-		db.collection('users',function(err,collection){ 
-		    var query_doc = {'first_name':'tom_test'};
-			collection.remove(query_doc);							//刪除query_doc
-		});
-													//搜尋並顯示
-		db.collection('users',function(err,collection){
-		    var query_doc = {'first_name':'tom'};
-			collection.findOne(query_doc,function(err,item){
-			 	console.log(item['first_name']);					//顯示item['first_name']
-				console.log(item['last_name']);						//顯示item['last_name']
-				console.log(item['age']);						//顯示item['age']
-			 	console.log(item.first_name);						//顯示item.first_name
-				console.log(item.last_name);						//顯示item.last_name
-				console.log(item.age);							//顯示item.age
-			});
-		});
+	    console.log("We are connected");								//連線時顯示"We are connected"
+	    
+													//新增資料方程式
+		db.collection('users',function(err,collection){						//├新增方程式(資料放在users資料表裡)	
+		        var doc = {'first_name':'tom','last_name':'lai'};				//├	設定doc的值
+			var doc2 = {'first_name':'tom_test','last_name':'lai_test'};			//├	設定doc2的值
+        	    collection.insert(doc);								//├	將doc新增到mongo
+        	    collection.insert(doc2);								//├	將doc2新稱到mongo
+		    });											//└
+		    
+													//修改方程式	
+		db.collection('users',function(err,collection){						//├新稱方程式(資料放在users資料表裡)
+		    var query_doc = {'first_name':'tom'};			 			//├	設定query_doc的搜尋參數
+		    collection.update(query_doc,{'$set':{'age':26}});					//├	將'$set':{'age':26}更新到資料庫的query_doc裡
+		});											//└
+		
+													//刪除方程式	
+		db.collection('users',function(err,collection){ 					//├新稱方程式(資料放在users資料表裡)
+		    var query_doc = {'first_name':'tom_test'};						//├	設定query_doc的搜尋參數
+			collection.remove(query_doc);							//├	刪除query_doc
+		});											//└
+		
+													//搜尋方成式
+		db.collection('users',function(err,collection){						//├新稱方程式(資料放在users資料表裡)
+		    var query_doc = {'first_name':'tom'};						//├	設定搜尋參數，名為query_doc
+			collection.findOne(query_doc,function(err,item){				//├	搜尋query_doc
+			 	console.log(item['first_name']);					//├		顯示item['first_name']
+				console.log(item['last_name']);						//├		顯示item['last_name']
+				console.log(item['age']);						//├		顯示item['age']
+			 	console.log(item.first_name);						//├		顯示item.first_name
+				console.log(item.last_name);						//├		顯示item.last_name
+				console.log(item.age);							//├		顯示item.age
+			});										//├
+		});											//└
 	}
 });
