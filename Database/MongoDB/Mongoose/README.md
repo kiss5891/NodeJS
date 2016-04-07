@@ -11,7 +11,7 @@ MongoDB 是以 documents 為基礎，在 SQL 資料庫稱為 table 的東西，�
 ###Schema
 
 mongoose 的 Schema 概念就是用 schema-based 的方式，定義一個 collection 的組成結構
-'''javascipt
+```JavaScript
 var Schema = mongoose.Schema
 var UserSchema = new Schema(
   {
@@ -22,4 +22,4 @@ var UserSchema = new Schema(
     update_at: { type: Date, default: Date.now }
   }
 )
-'''
+```
