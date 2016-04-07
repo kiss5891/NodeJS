@@ -1,7 +1,6 @@
 #mongodb
 
-```:Lbash
 
-http://slides.com/andy26283/mongodb/live#/
 
-```
+[教學PPT](http://slides.com/andy26283/mongodb/live#/)
+
