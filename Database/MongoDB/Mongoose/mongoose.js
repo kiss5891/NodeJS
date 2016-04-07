@@ -36,9 +36,9 @@ db.once('open', function callback () {						//"db.once()"，一旦資料庫狀�
 
 /*搜尋資料並顯示------------------------------------------------------------------------------------------------------------------------------------*/
 
-	UserModel.findOne({'name':'David'}, function (err, docs) {
-		console.log("搜尋資料並顯示年紀");
-	  	console.log(docs.age);
+	UserModel.findOne({'name':'David'}, function (err, docs) {		//利用'name':'David'的條件去尋找資料
+		console.log("搜尋資料並顯示年紀");				//顯示字
+	  	console.log(docs.age);						//顯示
 	});
 
 
