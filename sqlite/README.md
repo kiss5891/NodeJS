@@ -36,7 +36,7 @@ var db = new sqlite3.Database(file);
 ##判斷table是否建立
 ```javascript
 db.serialize(function() {
-  db.run("CREATE TABLE IF NOT EXISTS  tableName (NAME TEXT,REMARK TEXT)");
+  db.run("CREATE TABLE IF NOT EXISTS  TABLENAME (name TEXT,remark TEXT)");
 });
 ```
 
@@ -47,7 +47,7 @@ db.close();
 
 ##新增資料
 ```javascript
-var sqlInsert = "INSERT INTO TABLENAME(NAME,REMARK) VALUES (?,?)";
+var sqlInsert = "INSERT INTO TABLENAME(name,remark) VALUES (?,?)";
 db.run(sqlInsert,["A","aaa"]);
 db.run(sqlInsert,["B","bbb"]);
 db.run(sqlInsert,["C","ccc"]);
@@ -56,15 +56,15 @@ db.run(sqlInsert,["D","ddd"]);
 
 ##查詢
 ```javascript
-var sqlSelect = "SELECT rowid AS id, NAME,REMARK FROM TABLENAME";
+var sqlSelect = "SELECT rowid AS id, name,remark FROM TABLENAME";
 db.each(sqlSelect, function(err, row) {
-  console.log(row.id + ": " + row.NAME + ":" + row.REMARK);
+  console.log(row.id + ": " + row.name + ":" + row.remark);
 });
 ```
 
 ##修改
 ```javascript
-var sqlUpdate="update TABLENAME set REMARK=? where NAME=?";
+var sqlUpdate="update TABLENAME set remark=? where name=?";
 db.run(sqlUpdate,["J","D"]);
 ```
 
