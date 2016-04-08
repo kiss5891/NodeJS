@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('1.HTTP_StaticServer:server');
 var http = require('http');                               //建立一個伺服器
+var req = require('request');
+var url = require('url');
+
 
 
 var server = http.createServer(function (req, res){       //當使用者連線到本機端就執行
@@ -17,6 +20,60 @@ var server = http.createServer(function (req, res){       //當使用者連線�
 //監聽 12345 port
 server.listen(12345);                                     //透過127.0.0.1的本機端就可以連到第12行的程式去執行
 console.log('Server running at http://127.0.0.1:12345/');
+
+//使用fs.exists()檢查範例是否存在
+
+var fs = require('fs');                                   //導入Filesysten模組
+
+fs.exists('/home/wolibohebadon/NodeJS/http/1.HTTP_StaticServer/bin/myfile.txt',function(exists){                                          //檢查絕對路徑底下的檔案
+  if (exists)                                             //若存在秀出myfile.txt exists!
+    console.log('./myfile.txt exists!');
+  else {                                                  //否則秀出myfile.txt doesn\t exist!
+    console.log('./myfile.txt doesn\t exist!');
+  }
+});
+
+fs.readFile('/home/wolibohebadon/NodeJS/http/1.HTTP_StaticServer/bin/myfile.txt', function(err, content){                                 //讀取絕對路徑底下的檔案並回傳兩個值err,content
+  if (err){                                               //如果有錯誤
+    console.log('Failed to read');                        //秀出Failed to read
+    return;
+  }
+
+  console.log(content);                                   //顯示出內容
+});
+
+//解析網址url
+
+var filename  =url.parse('/home/wolibohebadon/NodeJS/http/1.HTTP_StaticServer/bin/example.txt').pathname;                                               //解析這一個路徑or網址
+console.log(filename);                                    
+
+//path取代普通字串拼接
+
+var http = require('http');
+var url = require('url');
+var path = require('path');
+var fs = require('fs');
+
+http.createServer(function(req, res){               //解析req以取得client要求的檔案名稱
+  var filename = url.parse(req.url).pathname;       //程式中所在目錄尋找這個檔案
+  var filepath = path.join(__dirname,filename);      //檢查目標檔案是否存在
+  fs.exists(filepath, function(exists){
+    if (!exists) {
+      res.writeHead(404, {'Content-Type':'text/plain'});
+      res.end('Not Found\n');
+      return;                                       //若不存在就顯示'Not Found'
+    }
+    fs.readFile(filepath, function(err, content){
+      res.writeHead(200, {'Content-Type':'text/plain'});
+      res.end(content);
+    });
+  });
+}).listen(1234);
+
+console.log('Server running at http://127.0.0.1:1234/');
+
+
+
 
 /**
  * Get port from environment and store in Express.
