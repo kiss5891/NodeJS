@@ -31,6 +31,7 @@ var config = {
 ##啟動web              
 ```bash
 路徑/ReactNative/ProjectName/web/
+
 $ vim index.web.js  
 $ react-web start       //http://localhost:3000/
 ```
