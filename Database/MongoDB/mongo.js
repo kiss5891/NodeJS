@@ -11,12 +11,11 @@ db.open(function(err,db){
 
 																																				 //新增資料方程式
 		db.collection('users',function(err,collection){										   //新增方程式(資料放在users資料表裡)
-		        var doc = {'first_name':'tom','last_name':'lai'};						 		 //設定doc的值
+		        var doc = {'first_name':'tom','last_name':'lai'};						 //設定doc的值
 						var doc2 = {'first_name':'tom_test','last_name':'lai_test'}; //設定doc2的值
         	    collection.insert(doc);																		 //將doc新增到mongo
         	    collection.insert(doc2);																	 //將doc2新稱到mongo
 		    });
-
 																																				 //修改方程式
 		db.collection('users',function(err,collection){											 //新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom'};			 											 //設定query_doc的搜尋參數
@@ -28,7 +27,6 @@ db.open(function(err,db){
 		    var query_doc = {'first_name':'tom_test'};											 //設定query_doc的搜尋參數
 			collection.remove(query_doc);																			 //刪除query_doc
 		});
-
 																																				 //搜尋方成式
 		db.collection('users',function(err,collection){											 //新稱方程式(資料放在users資料表裡)
 		    var query_doc = {'first_name':'tom'};														 //設定搜尋參數，名為query_doc
