@@ -15,10 +15,10 @@ $ mkdir web                         //建立網頁資料夾
 $ react-web init '網頁專案名稱'     //初始化react-web
 ```
 
-##index設置         //ReactNative/ProjectName/web/web/webpack.config.js
+##index設置         
 ```bash
-更改
-
+路徑/ReactNative/ProjectName/web/web/webpack.config.js
+ 
 var config = {
   paths: {
     src: path.join(ROOT_PATH, '.'),
@@ -28,8 +28,9 @@ var config = {
 ```
 
 
-##啟動web               //ReactNative/ProjectName/web/
-```
+##啟動web              
+```bash
+路徑/ReactNative/ProjectName/web/
 $ vim index.web.js  
 $ react-web start       //http://localhost:3000/
 ```
