@@ -13,7 +13,7 @@ $ cd  ReactNative                   //進入資料夾
 $ react-native init ProjectNmae     //初始化一个项目，其中 AwesomeProject 是项目名字ㄧ
 $ mkdir web                         //建立網頁資料夾
 $ react-web init '網頁專案名稱'     //初始化react-web
-
+```
 
 ##index設置         //ReactNative/ProjectName/web/web/webpack.config.js
 ```bash
