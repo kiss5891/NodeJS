@@ -1,0 +1,15 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "[教學PPT](http://slides.com/andy26283/mongodb/live#/)",
+  "main": "mongo.js",
+  "dependencies": {
+    "mongo": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Titan",
+  "license": "ISC"
+}
