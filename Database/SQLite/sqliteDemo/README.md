@@ -2,57 +2,57 @@
 ##創建或載入資料庫
 創建或載入一個名為databasename的db檔給主資料庫
 ```sql
-$sqlite3.exe databasename.db 								
-sqlite>ATTACH DATABASE 'databasename.db' as 'databasename'  
+$ sqlite3.exe databasename.db 								
+sqlite> ATTACH DATABASE 'databasename.db' as 'databasename'  
 ```
 釋放掉名為databasename的資料庫
 ```sql
-sqlite>detach database 'databasename'						
-$sqlite3 databasename.db .dump > databasename.sql 			
-$sqlite3 databasename.db < databasename.sql 				
+sqlite> detach database 'databasename'						
+$ sqlite3 databasename.db .dump > databasename.sql 			
+$ sqlite3 databasename.db < databasename.sql 				
 ```
 ##創建表
 創建一個表 (database_name可以不用)
 ``` sql
-sqlite>CREATE TABLE database_name.table_name(				
-sqlite>column1 datatype  PRIMARY KEY(one or more columns),	
-sqlite>column2 datatype,									
-sqlite>column3 datatype,
-sqlite>.....
-sqlite>columnN datatype,
-sqlite>);
+sqlite> CREATE TABLE database_name.table_name(				
+sqlite> column1 datatype  PRIMARY KEY(one or more columns),	
+sqlite> column2 datatype,									
+sqlite> column3 datatype,
+sqlite> .....
+sqlite> columnN datatype,
+sqlite> );
 ```
 ##刪除表
 刪除tablename
 ``` sql
-sqlite>DROP TABLE tablename;												
+sqlite> DROP TABLE tablename;												
 ```
 ##Insert
 ```sql
-sqlite>INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)]  
-sqlite>VALUES (value1, value2, value3,...valueN);
+sqlite> INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)]  
+sqlite> VALUES (value1, value2, value3,...valueN);
 ```
 或
 ```sql
-sqlite>INSERT INTO TABLE_NAME VALUES (value1, value2, value3,...valueN);
+sqlite> INSERT INTO TABLE_NAME VALUES (value1, value2, value3,...valueN);
 ```
 把別的表載入
 ```sql
-sqlite>INSERT INTO first_table_name [(column1, column2, ... columnN)] 
-sqlite>SELECT column1, column2, ...columnN 
-sqlite>FROM second_table_name
-sqlite>[WHERE condition];
+sqlite> INSERT INTO first_table_name [(column1, column2, ... columnN)] 
+sqlite> SELECT column1, column2, ...columnN 
+sqlite> FROM second_table_name
+sqlite> [WHERE condition];
 ```
 ##select
 如果column1=2就印出column1
 ```sql
-sqlite>select column1 from tablename where column1=2 		
+sqlite> select column1 from tablename where column1=2 		
 ```
 ##Where 
 條件
 ```sql
 
-sqlite>select column1 from tablename where 	1=1		 		
+sqlite> select column1 from tablename where 	1=1		 		
 ```
 可以用的條件方法
 AND 运算符允许在一个 SQL 语句的 WHERE 子句中的多个条件的存在。
@@ -85,18 +85,18 @@ UNIQUE 运算符搜索指定表中的每一行，确保唯一性（无重复）�
 ##update
 滿足條件就把colum1的值設為aaa
 ```sql
-sqlite>UPDATE tablename SET colum1 = 'aaa' WHERE 1=1;			
+sqlite> UPDATE tablename SET colum1 = 'aaa' WHERE 1=1;			
 ```
 ##delete
 滿足條件就刪除
 ```sql
-sqlite>DELETE FROM tablename WHERE 1=1;						
+sqlite> DELETE FROM tablename WHERE 1=1;						
 ```
 
 ##LIMIT和OFFSET
 第一個數字填提取的數量第二個填跳過得數量
 ```sql
-sqlite>SELECT * FROM tablename LIMIT NUMBER OFFSET NUMBER			
+sqlite> SELECT * FROM tablename LIMIT NUMBER OFFSET NUMBER			
 ```
 ##ORDER BY
 以colum1來排序 asc為升序 DESC為降序(預設降序)
