@@ -8,14 +8,14 @@ db.once('open', function callback () {                                  		//"db.
   console.log("連線成功");                                              		//這裡只在console顯示連結成功。
  
 var rl = readline.createInterface(process.stdin, process.stdout);		//創建一個逐行讀取
-	 var UserSchema = new mongoose.Schema({                                 //定義UserSchema為一個mongoose的架構
-            name:String,                                                        //      其中架構為 name : String
-        });                                                                     //
-        var UserModel = db.model('User',UserSchema);                            //用UserSchema來產生一>個名(index)為"User"的Model並指定給變數UserModel
-	rl.question("What is key's value?",function(answer2){			//預先提示 文字，用户應答后將其答案傳入內部function
-		console.log("name : "+answer2);					//顯示
-	        var userEntity = new UserModel({ name : answer2 });		//新增資料userEntity 
-		userEntity.save()                          			//將資料上傳
-		rl.close();							//
-	})									//
-})
+	 var UserSchema = new mongoose.Schema({                                 //├定義UserSchema為一個mongoose的架構
+            name:String,                                                        //│ ├    其中架構為 name : String
+        });                                                                     //│ └
+        var UserModel = db.model('User',UserSchema);                            //├用UserSchema來產生一>個名(index)為"User"的Model並指定給變數UserModel
+	rl.question("What is key's value?",function(answer2){			//├預先提示 文字，用户應答后將其答案傳入內部function
+		console.log("name : "+answer2);					//│ ├顯示
+	        var userEntity = new UserModel({ name : answer2 });		//│ ├新增資料userEntity 
+		userEntity.save()                          			//│ ├將資料上傳
+		rl.close();							//│ ├
+	})									//│ └
+})										//└
