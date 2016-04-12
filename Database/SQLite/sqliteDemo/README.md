@@ -55,37 +55,34 @@ sqlite> select column1 from tablename where column1=2
 sqlite> select column1 from tablename where 	1=1		 		
 ```
 可以用的條件方法
-AND 运算符允许在一个 SQL 语句的 WHERE 子句中的多个条件的存在。
+AND 多個條件同時達成
 
-BETWEEN 运算符用于在给定最小值和最大值范围内的一系列值中搜索值。
+BETWEEN 值>=最小值或<=最大值的話就滿足條件
 
-EXISTS 运算符用于在满足一定条件的指定表中搜索行的存在。
+EXISTS 在where後面做的而外搜尋的值全部顯示
 
-IN 运算符用于把某个值与一系列指定列表的值进行比较。
+IN 只要等於IN ()裡面的值就TRUE
 
-NOT	IN 运算符的对立面，用于把某个值与不在一系列指定列表的值进行比较。
+NOT	IN 只要等於IN ()裡面的值就FALSE
 
-LIKE 运算符用于把某个值与使用通配符运算符的相似值进行比较。   (%代表0~無限 _代表1)
+LIKE 字符等於LUKE()裡面的值就是TRUE   (%代表0~無限隨意字符 _代表1個隨意字符)
 
-GLOB 运算符用于把某个值与使用通配符运算符的相似值进行比较。GLOB 与 LIKE 不同之处在于，它是大小写敏感的。(*代表代表0~無限 ?代表1)
+例如 "AAA"==LUKE("%A") ==LUKE("%_A") ==LUKE("___") ==LUKE("A%%") !=LUKE("B%%%") !=LUKE("__")
 
-NOT 运算符是所用的逻辑运算符的对立面。比如 NOT EXISTS、NOT BETWEEN、NOT IN，等等。它是否定运算符。
+GLOB 跟LIKE類似，只是會分辨小寫。 (*代表0~無限隨意字符 ?代表1個隨意字符)
 
-OR 运算符用于结合一个 SQL 语句的 WHERE 子句中的多个条件。
+NOT 把後面的邏輯值反向
 
-IS	NULL 运算符用于把某个值与 NULL 值进行比较。
+OR 只要達成一個條件就可
 
-IS 运算符与 = 相似。
+IS 跟=相似
 
-IS NOT 运算符与 != 相似。
+||	把二個字串連起來
 
-||	连接两个不同的字符串，得到一个新的字符串。
-
-UNIQUE 运算符搜索指定表中的每一行，确保唯一性（无重复）。
 ##update
-滿足條件就把colum1的值設為aaa
+滿足條件就把column1的值設為aaa
 ```sql
-sqlite> UPDATE tablename SET colum1 = 'aaa' WHERE 1=1;			
+sqlite> UPDATE tablename SET column1 = 'aaa' WHERE 1=1;			
 ```
 ##delete
 滿足條件就刪除
@@ -99,62 +96,62 @@ sqlite> DELETE FROM tablename WHERE 1=1;
 sqlite> SELECT * FROM tablename LIMIT NUMBER OFFSET NUMBER			
 ```
 ##ORDER BY
-以colum1來排序 asc為升序 DESC為降序(預設降序)
+以column1來排序 asc為升序 DESC為降序(預設降序)
 ```sql
-sqlite> SELECT * FROM tablename ORDER BY colum1 ASC;			
+sqlite> SELECT * FROM tablename ORDER BY column1 ASC;			
 ```
 ##GROUP BY
 GROUP BY要放在ORDER BY前面
 
-以colum1的值來分組
+以column1的值來分組
 ```sql
-sqlite> SELECT * FROM tablename GROUP BY colum1;				
+sqlite> SELECT * FROM tablename GROUP BY column1;				
 ```
 ##HAVING
 HAVING放在GROUP BY的後面 在ORDER BY前面
 
-以colum1的值來分組 分組完的滿足having條件才顯示
+以column1的值來分組 分組完的滿足having條件才顯示
 ```sql
-sqlite > SELECT * FROM tablename GROUP BY colum1 HAVING 1==1;	
+sqlite > SELECT * FROM tablename GROUP BY column1 HAVING 1==1;	
 
 ```
 ##DISTINCT
-如果colum1有重複的就只顯示一個
+如果column1有重複的就只顯示一個
 ```sql
-sqlite> SELECT DISTINCT colum1 FROM COMPANY;						
+sqlite> SELECT DISTINCT column1 FROM tablename;						
 ```
 
 ##常用函数
 
 COUNT 函数
-SQLite COUNT 聚集函数是用来计算一个数据库表中的行数。
+執行的次數
 
 MAX 函数
-SQLite MAX 聚合函数允许我们选择某列的最大值。
+包含的值中最大的值
 
 MIN 函数
-SQLite MIN 聚合函数允许我们选择某列的最小值。
+包含的值中最小的值
 
 AVG 函数
-SQLite AVG 聚合函数计算某列的平均值。
+包含的值加起來取平均
 
 SUM 函数
-SQLite SUM 聚合函数允许为一个数值列计算总和。
+包含的值加起來
 
 RANDOM 函数
-SQLite RANDOM 函数返回一个介于 -9223372036854775808 和 +9223372036854775807 之间的伪随机整数。
+做一個亂數是 -9223372036854775808 和 +9223372036854775807 之间的偽隨機整數。
 
 ABS 函数
-SQLite ABS 函数返回数值参数的绝对值。
+包含的值的絕對值
 
 UPPER 函数
-SQLite UPPER 函数把字符串转换为大写字母。
+包含的英文字串轉全部變大寫
 
 LOWER 函数
-SQLite LOWER 函数把字符串转换为小写字母。
+包含的英文字串轉全部變小寫
 
 LENGTH 函数
-SQLite LENGTH 函数返回字符串的长度。
+包含的字符數量
 
 sqlite_version 函数
-SQLite sqlite_version 函数返回 SQLite 库的版本。
+sqlite的版本
