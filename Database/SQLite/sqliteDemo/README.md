@@ -122,23 +122,33 @@ sqlite> SELECT DISTINCT colum1 FROM COMPANY;
 
 COUNT 函数
 SQLite COUNT 聚集函数是用来计算一个数据库表中的行数。
+
 MAX 函数
 SQLite MAX 聚合函数允许我们选择某列的最大值。
+
 MIN 函数
 SQLite MIN 聚合函数允许我们选择某列的最小值。
+
 AVG 函数
 SQLite AVG 聚合函数计算某列的平均值。
+
 SUM 函数
 SQLite SUM 聚合函数允许为一个数值列计算总和。
+
 RANDOM 函数
 SQLite RANDOM 函数返回一个介于 -9223372036854775808 和 +9223372036854775807 之间的伪随机整数。
+
 ABS 函数
 SQLite ABS 函数返回数值参数的绝对值。
+
 UPPER 函数
 SQLite UPPER 函数把字符串转换为大写字母。
+
 LOWER 函数
 SQLite LOWER 函数把字符串转换为小写字母。
+
 LENGTH 函数
 SQLite LENGTH 函数返回字符串的长度。
+
 sqlite_version 函数
 SQLite sqlite_version 函数返回 SQLite 库的版本。
