@@ -6,18 +6,23 @@
 
 - 基礎(Basic) 
   - 基本流程控制
-    - If、For、While、Switch、TryCatch
+    - If
+    - For、While
+    - Switch、Try catch
   - 資料型態
     - 變數型態、JSON、數學運算
-  - 函數
+  - 物件(Object)
+    - Prototype、Module
   - 資料庫連接
-
+    - [SQLite](./Database/SQLite)、[MySQL](./Database/MySQL)、MSSQL、[MongoDB](./Database/MongoDB)、Redis、LevelDB
+  - HTML
+    - 
 - 進階 (Advanced) 
-  - 雲端平台
+  - 雲端平台(Cloud Platform)
     - Facebook
     - Google
-
-
+  - 訊息佇列(Message Queue)
+    
 
 ###Contributor
 ```
@@ -26,9 +31,4 @@
 李汶昇、黃垚丁、郭承鑫、陳立軒
 游婉琳、陳勇辰
 ```
-1. 這是數字清單 1
 
- 1.1. 這是數字清單 1.1
-
-2. 這是數字清單 2
-3. 這是數字清單 3
