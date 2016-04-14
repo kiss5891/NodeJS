@@ -6,9 +6,9 @@
 
 - 基礎(Basic) 
   - 基本流程控制
-    - If
-    - For、While
-    - Switch、Try catch
+    - [If](./Basic/If)
+    - [For](./Basic/For)、[While](./Basic/While)
+    - [Switch](./Basic/Switch)、[Try catch](./Basic/Try_Catch)
   - 資料型態
     - 變數型態、JSON、[數學運算](./Basic/Math)
   - 時間
