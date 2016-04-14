@@ -10,7 +10,7 @@
     - [For](./Basic/For)、[While](./Basic/While)
     - [Switch](./Basic/Switch)、[Try catch](./Basic/Try_Catch)
   - 資料型態
-    - 變數型態、JSON、[數學運算](./Basic/Math)
+    - 變數型態、[JSON](./Basic/JSON)、[數學運算](./Basic/Math)
   - 時間
     - [Date](./Basic/Date)、[Moment](./Basic/Moment)
   - 物件(Object)
