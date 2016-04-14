@@ -10,9 +10,9 @@
     - For、While
     - Switch、Try catch
   - 資料型態
-    - 變數型態、JSON、數學運算
+    - 變數型態、JSON、[數學運算](./Basic/Math)
   - 時間
-    - Date、Moment
+    - [Date](./Basic/Date)、[Moment](./Basic/Moment)
   - 物件(Object)
     - Prototype、Module
   - 資料庫連接
