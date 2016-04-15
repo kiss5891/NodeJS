@@ -26,7 +26,7 @@
   - [Binary](./Document_process/Binary)
   - [INI](./Document_process/INI)
   - office文件
-    - .docx、.pptx、.xlsx
+    - [.docx](./Document_process/Office/docx)、[.pptx](./Document_process/Office/pptx)、[.xlsx](./Document_process/Office/xlsx)
 - 進階 (Advanced) 
   - 雲端平台(Cloud Platform)
     - Facebook
