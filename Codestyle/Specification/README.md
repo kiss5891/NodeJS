@@ -7,7 +7,7 @@
 * 因為Tab會因編譯器不同而造成排版雜亂
 */
 var year = 2016 ;
-if ( year == 2016 ){
+if ( year === 2016 ){
   return year;
 }
 ```
