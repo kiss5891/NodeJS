@@ -4,18 +4,6 @@
 
 ###目錄
 - 設計規範(Coding Style)
-  - [字串](#strings) [變數](#variables) [註解](#comments) [空格](#whitespace) [逗號](#commas) [分號](#semicolons) [陣列](#arrays) [資料型態](#types) [型別轉換](#type-casting--coercion)
-  - [函式](#functions) [箭頭函式](#arrow-functions) [條件式與等號](#comparison-operators--equality) [事件](#events)
-  - [解構子](#destructuring) [建構子](#constructors) [屬性](#properties) [模組](#modules) [物件](#objects)
-  1. [參考](#references)
-  1. [提升](#hoisting)
-  1. [區塊](#blocks)
-  1. [命名規則](#naming-conventions)
-  1. [存取器](#accessors)
-  1. [jQuery](#jquery)
-  1. [ECMAScript 5 相容性](#ecmascript-5-compatibility)
-  1. [ECMAScript 6 風格](#ecmascript-6-styles)
-
 
 - 基礎(Basic) 
   - 基本流程控制
