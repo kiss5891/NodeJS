@@ -21,10 +21,10 @@ function object()
 
 };
 
-var o1 =  new object;
-var o2 = new object;
-var o11 = o1;
-console.log("o1 " +  o1.rname() );
+var o1 =  new object;                       //o1繼承 object
+var o2 = new object;                        //o2繼承 object
+var o11 = o1;                               //o11 等於 01
+console.log("o1 " +  o1.rname() );          
 console.log("o1 " +  o1.ryear() );
 
 console.log("o2 " +  o2.rname() );
